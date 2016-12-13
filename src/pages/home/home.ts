@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController } from 'ionic-angular';
 import {DetailsPage} from '../details/details'
+import {Http} from '@angular/http';
 
 import { NavController } from 'ionic-angular';
 
@@ -10,9 +11,10 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  items = [];
+  items: any;
+  loadedItems: any;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public http: Http) {
   	this.createItemList();
   }
 
@@ -20,8 +22,19 @@ export class HomePage {
   	
   }
 
-  createItemList(){
-  	this.items = ["Golum", "usw"];
+  loadAllCharakters(){
+  	this.http.get("/assets/data/figures.json").subscribe(data => {
+        this.loadedItems = JSON.parse(data['_body']).charakters;
+        this.items = this.loadedItems;
+    });
+  }
+
+  createItemList(){  	
+  	if (typeof this.loadedItems == "undefined"){  		  	
+  		this.loadAllCharakters();
+  	} else {
+  		this.items = this.loadedItems;
+  	}  	
   }
 
   itemSelected(item){
@@ -33,9 +46,11 @@ export class HomePage {
     let val = ev.target.value;
     if (val && val.trim() != '') {
       this.items = this.items.filter((item) => {
-        return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        return ((item.name).toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
   }
 
 }
+
+
