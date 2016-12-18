@@ -1,50 +1,37 @@
 {
 	"charakters": [{
-		"name": "Golum",
-		"url": "",
-		"a": "1",
-		"b": "2",
-		"c": "3",
-		"d": "4"
-	},{
-		"name": "Gandalf",
-		"url": "",
-		"a": "1",
-		"b": "2",
-		"c": "3",
-		"d": "4"
+		"name": "Aragorn, King Elessar",
+		"url": "http://www.returnofkings.com/wp-content/uploads/2014/11/Aragorn.jpg",
+		"mv": "6",
+		"f": "6/3+",
+		"s": "4",
+		"d": "7",
+		"a": "3",
+		"w": "3",
+		"c": "6"
 	},
 	{
-		"name": "Frodo",
-		"url": "",
-		"a": "1",
-		"b": "2",
-		"c": "3",
-		"d": "4"
-	},
+		"name": "Faramir, Captain of Gondor",
+		"url": "http://img3.wikia.nocookie.net/__cb20111222200551/lucerne/images/9/9a/Faramir-faramir-9716911-1024-768.jpg",
+		"mv": "6",
+		"f": "5/3+",
+		"s": "4",
+		"d": "5",
+		"a": "2",
+		"w": "2",
+		"c": "5"
+	}
+	,
 	{
-		"name": "Ringgeist",
-		"url": "",
+		"name": "Peregrin, Guard of the Citadel",
+		"url": "https://virtue4.files.wordpress.com/2009/06/pippin_took.jpg",
+		"mv": "4",
+		"f": "3/3+",
+		"s": "2",
+		"d": "4",
 		"a": "1",
-		"b": "2",
-		"c": "3",
-		"d": "4"
-	},
-	{
-		"name": "Saroman",
-		"url": "",
-		"a": "1",
-		"b": "2",
-		"c": "3",
-		"d": "4"
-	},
-	{
-		"name": "Sauron",
-		"url": "",
-		"a": "1",
-		"b": "2",
-		"c": "3",
-		"d": "4"
+		"w": "1",
+		"c": "4"
 	}
 ]
 }

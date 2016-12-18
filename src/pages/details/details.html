@@ -15,4 +15,27 @@
 
 <ion-content padding>
 
+<ion-card>
+  <img src={{param.url}}/>
+  <ion-card-content>
+    <ion-card-title>
+      {{param.name}}
+      </ion-card-title>
+    <p>
+      <ion-grid>
+  		<ion-row>
+    		<ion-col width-15 class="centerText">Mv = {{param.mv}}</ion-col>
+    		<ion-col width-15 class="centerText">F = {{param.f}}</ion-col>
+    		<ion-col width-15 class="centerText">S = {{param.s}}</ion-col>
+    		<ion-col width-15 class="centerText">D = {{param.d}}</ion-col>
+    		<ion-col width-15 class="centerText">a = {{param.a}}</ion-col>
+    		<ion-col width-15 class="centerText">W = {{param.w}}</ion-col>
+    		<ion-col width-15 class="centerText">C = {{param.c}}</ion-col>
+  		</ion-row>
+	  </ion-grid>
+	  
+    </p>
+  </ion-card-content>
+</ion-card>
+
 </ion-content>

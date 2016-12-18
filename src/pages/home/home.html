@@ -1,17 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Herr der Ringe</ion-title>
+    <ion-title>Der Herr der Ringe</ion-title>
   </ion-navbar>
+  <ion-toolbar position="top">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Übersicht aller Figuren</h2>
-
-<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
+<ion-content>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-        {{ item.name }}
-    </button>  
+    <ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+    <ion-avatar item-left>
+      <img src= {{item.url}}>
+    </ion-avatar>
+    <h2> {{ item.name }}</h2>
+    <p>Mv = {{item.mv}}, F = {{item.f}}, S = {{item.s}}, D = {{item.d}}, A = {{item.a}}, W = {{item.w}}, C = {{item.c}}</p>
+  </ion-item>
 </ion-list>
 </ion-content>
