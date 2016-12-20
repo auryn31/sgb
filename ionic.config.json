@@ -11,5 +11,11 @@
     "www/**/*",
     "!www/lib/**/*",
     "!www/**/*.map"
+  ],
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://www.mocky.io/v2/58585f5e120000881cc8af2c"
+    }
   ]
 }

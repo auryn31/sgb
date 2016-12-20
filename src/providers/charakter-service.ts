@@ -28,9 +28,12 @@ export class CharakterService {
   	// 		url = "../www/";
   	// 	}
   	// }
+  	// /assets/data/figures.json
   	return new Promise(resolve => {
-  		this.http.get("/assets/data/figures.json").map(res => res.json()).subscribe(data => {  			
+  		this.http.get("/api").map(res => res.json()).subscribe(data => {  	
+  			console.log(data);		
   			this.data = data.charakters;
+  			console.log(data);
   			resolve(this.data);
       	});
   	})
