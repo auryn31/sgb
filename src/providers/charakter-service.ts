@@ -30,10 +30,8 @@ export class CharakterService {
   	// }
   	// /assets/data/figures.json
   	return new Promise(resolve => {
-  		this.http.get("/api").map(res => res.json()).subscribe(data => {  	
-  			console.log(data);		
+  		this.http.get("/api").map(res => res.json()).subscribe(data => {
   			this.data = data.charakters;
-  			console.log(data);
   			resolve(this.data);
       	});
   	})
